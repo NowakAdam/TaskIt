@@ -108,12 +108,18 @@
                                 <rect key="frame" x="16" y="124" width="288" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="16" y="110" width="288" height="30"/>
+                                </variation>
                             </textField>
                             <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="z3k-cQ-8XN">
                                 <rect key="frame" x="16" y="174" width="288" height="162"/>
                                 <date key="date" timeIntervalSinceReferenceDate="457280745.20167702">
                                     <!--2015-06-29 14:25:45 +0000-->
                                 </date>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="16" y="148" width="288" height="162"/>
+                                </variation>
                             </datePicker>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -184,18 +190,9 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="16" y="77" width="288" height="30"/>
+                                    <rect key="frame" x="16" y="66" width="288" height="30"/>
                                 </variation>
                             </textField>
-                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="9Zr-HR-j0r">
-                                <rect key="frame" x="-160" y="-81" width="320" height="162"/>
-                                <date key="date" timeIntervalSinceReferenceDate="457286559.61490899">
-                                    <!--2015-06-29 16:02:39 +0000-->
-                                </date>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="13" y="204" width="294" height="162"/>
-                                </variation>
-                            </datePicker>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Task" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PbB-cD-CiR">
                                 <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -211,7 +208,7 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="16" y="111" width="63" height="21"/>
+                                    <rect key="frame" x="16" y="96" width="63" height="21"/>
                                 </variation>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rba-8u-cqC">
@@ -220,7 +217,7 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="16" y="175" width="36" height="21"/>
+                                    <rect key="frame" x="16" y="148" width="36" height="21"/>
                                 </variation>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7xm-y3-0Hp">
@@ -228,9 +225,18 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="16" y="137" width="288" height="30"/>
+                                    <rect key="frame" x="16" y="118" width="288" height="30"/>
                                 </variation>
                             </textField>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="9Zr-HR-j0r">
+                                <rect key="frame" x="-160" y="-81" width="320" height="162"/>
+                                <date key="date" timeIntervalSinceReferenceDate="457286559.61490899">
+                                    <!--2015-06-29 16:02:39 +0000-->
+                                </date>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="16" y="168" width="294" height="162"/>
+                                </variation>
+                            </datePicker>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <variation key="default">
@@ -238,11 +244,11 @@
                                 <exclude reference="HyM-vX-2pY"/>
                                 <exclude reference="LeW-eT-8xG"/>
                                 <exclude reference="oV1-eH-kCh"/>
-                                <exclude reference="9Zr-HR-j0r"/>
                                 <exclude reference="PbB-cD-CiR"/>
                                 <exclude reference="84q-eF-YbH"/>
                                 <exclude reference="rba-8u-cqC"/>
                                 <exclude reference="7xm-y3-0Hp"/>
+                                <exclude reference="9Zr-HR-j0r"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -250,11 +256,11 @@
                                 <include reference="HyM-vX-2pY"/>
                                 <include reference="LeW-eT-8xG"/>
                                 <include reference="oV1-eH-kCh"/>
-                                <include reference="9Zr-HR-j0r"/>
                                 <include reference="PbB-cD-CiR"/>
                                 <include reference="84q-eF-YbH"/>
                                 <include reference="rba-8u-cqC"/>
                                 <include reference="7xm-y3-0Hp"/>
+                                <include reference="9Zr-HR-j0r"/>
                             </mask>
                         </variation>
                     </view>
