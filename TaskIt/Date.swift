@@ -40,7 +40,7 @@ class Date {
     class func toString(#date:NSDate) -> String {
     
     let dateStringFormatter = NSDateFormatter()
-        dateStringFormatter.dateFormat = "dd.MM.yyyy"
+        dateStringFormatter.dateFormat = "dd.MM.yyyy' 'hh:mm"
     let dateString = dateStringFormatter.stringFromDate(date)
     
     return dateString

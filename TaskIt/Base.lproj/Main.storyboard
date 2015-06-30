@@ -33,17 +33,23 @@
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Subtask" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hy6-xg-aRI">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Subtask" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hy6-xg-aRI">
                                                     <rect key="frame" x="8" y="45" width="196" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
+                                                    <variation key="widthClass=compact" fixedFrame="YES">
+                                                        <rect key="frame" x="8" y="21" width="158" height="53"/>
+                                                    </variation>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Date" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jdE-lf-7S6">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Date" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jdE-lf-7S6">
                                                     <rect key="frame" x="218" y="26" width="94" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
+                                                    <variation key="widthClass=compact" fixedFrame="YES">
+                                                        <rect key="frame" x="174" y="22" width="138" height="35"/>
+                                                    </variation>
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
@@ -74,7 +80,7 @@
                     <connections>
                         <outlet property="tableView" destination="vuJ-8R-qwt" id="wiW-DL-jwM"/>
                         <segue destination="8E0-di-HIN" kind="show" identifier="showTaskDetail" id="7qe-jx-3Rq"/>
-                        <segue destination="zz0-9G-C7b" kind="presentation" identifier="showTaskAdd" id="XUo-1s-D0I"/>
+                        <segue destination="zz0-9G-C7b" kind="presentation" identifier="showTaskAdd" id="BrG-I7-TR2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -119,7 +125,11 @@
                                 <action selector="cancelButtonTapped:" destination="8E0-di-HIN" id="Lzy-Dd-mHc"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="Done" id="6dE-wM-lPa"/>
+                        <barButtonItem key="rightBarButtonItem" title="Done" id="6dE-wM-lPa">
+                            <connections>
+                                <action selector="doneBarButtonItemPressed:" destination="8E0-di-HIN" id="kDb-xg-kw0"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
@@ -142,7 +152,7 @@
                         <viewControllerLayoutGuide type="bottom" id="iqY-Se-MYX"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Mek-Nu-QHi">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HyM-vX-2pY">
@@ -165,6 +175,9 @@
                                 <variation key="widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="240" y="15" width="64" height="30"/>
                                 </variation>
+                                <connections>
+                                    <action selector="addTaskButtonTapped:" destination="zz0-9G-C7b" eventType="touchUpInside" id="PWf-u6-G0e"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oV1-eH-kCh">
                                 <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
@@ -246,6 +259,11 @@
                         </variation>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                    <connections>
+                        <outlet property="dueDatePicker" destination="9Zr-HR-j0r" id="yht-fQ-rC7"/>
+                        <outlet property="subtaskTextField" destination="7xm-y3-0Hp" id="mQZ-uP-f0Z"/>
+                        <outlet property="taskTextField" destination="oV1-eH-kCh" id="sgg-jw-cfs"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="b3e-zF-xxY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
